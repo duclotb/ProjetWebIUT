@@ -70,6 +70,7 @@ input[name="search-bar"]:focus ~ button{
 
 main {
 	flex: 1;
+	padding: 30px;
 }
 
 /************************************/
