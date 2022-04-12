@@ -44,10 +44,6 @@ input[name="search-bar"]:focus{
 }
 input[name="search-bar"]:focus ~ button{
 	background: url("../images/search-icon-focus.svg") center/contain no-repeat;
-
-
-	border-right: 1px solid white;
-	border-radius: 0 10px 10px 0;
 }
 
 .search-bar button{
