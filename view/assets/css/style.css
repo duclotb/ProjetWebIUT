@@ -5,5 +5,56 @@
 }
 
 body {
+	min-height: 100vh;
 	background-color: greenyellow;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+
+	margin: 2em 0;
+	
+}
+
+.container{
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.search-bar{
+	display: flex;
+	width: 400px;
+	height: 40px;
+
+	background-color: white;
+	/* border: 1px solid; */
+	border-radius: 0 10px 10px 0;
+}
+
+input[name="search-bar"]{
+	height: 100%;
+	width: 100%;
+	padding-left: 1em;
+	border: unset;
+}
+
+input[name="search-bar"]:focus{
+	outline: none;
+}
+input[name="search-bar"]:focus ~ button{
+	background: url("../images/search-icon-focus.svg") center/contain no-repeat;
+
+
+	border-right: 1px solid white;
+	border-radius: 0 10px 10px 0;
+}
+
+.search-bar button{
+	height: 100%;
+	width: 60px;
+	background: url("../images/search-icon.svg") center/contain no-repeat;
+
+	border: unset;
+	cursor: pointer;
 }
