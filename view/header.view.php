@@ -9,14 +9,16 @@
 </head>
 <body>
 
-<div class="container">
-
 <header>
-	<h1>Le titre de notre site</h1>
-	<div class="search-bar">
-		<input type="text" name="search-bar" id="" placeholder="Recherche un livre par mot clé">
-		<button type="submit"></button>
+	<div class="container space-between">
+		<h1>Le titre de notre site</h1>
+		<form action="rechercher.ctrl.php" class="search-bar">
+			<input type="text" name="search-bar" id="" placeholder="Recherche un livre par mot clé">
+			<button type="submit"></button>
+		</form>
 	</div>
-
 </header>
+
+<main>
+	<div class="container">
 	
