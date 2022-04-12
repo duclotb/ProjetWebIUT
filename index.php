@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="view/assets/css/style.css">
-	<title>Document</title>
-</head>
-<body>
-	<h1>Premire Balise ! Wouhou</h1>
-</body>
-</html>
+<?php
+  // Indique le point de démarrage de l'application
+  header('Location: controler/main.ctrl.php');
+  /* Il y a volontairement pas de ?> àa la fin de ce fichier */
