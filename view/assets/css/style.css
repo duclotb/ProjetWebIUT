@@ -12,6 +12,11 @@ body {
 	flex-direction: column;
 }
 
+a{
+	text-decoration: unset;
+	color: unset;
+}
+
 .space-between{
 	display: flex;
 	justify-content: space-between;
@@ -20,6 +25,16 @@ body {
 .container{
 	max-width: 1300px;
 	margin: 0 auto;
+}
+
+.wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
 }
 
 /************************************/
