@@ -7,6 +7,16 @@ article{
 
 	border: 1px solid;
 	border-radius: 10px;
+
+	margin: 2em;
+
+	overflow: hidden;
+}
+article:hover{
+	cursor: pointer;
+}
+article:hover img{
+	width: 115%;
 }
 
 div img{
@@ -16,6 +26,8 @@ div img{
 	object-fit: cover;
 
 	border-radius: 10px 10px 0 0;
+
+	transition: width 0.5s ease-out;
 }
 
 .information{
@@ -35,6 +47,7 @@ div img{
 }
 
 .prix{
+	font-size: 1.25em;
 	margin: auto;
 }
 
