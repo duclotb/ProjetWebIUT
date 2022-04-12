@@ -7,19 +7,28 @@
 body {
 	min-height: 100vh;
 	background-color: greenyellow;
+
+	display: flex;
+	flex-direction: column;
 }
 
-header{
+.space-between{
 	display: flex;
 	justify-content: space-between;
-
-	margin: 2em 0;
-	
 }
 
 .container{
 	max-width: 1300px;
 	margin: 0 auto;
+}
+
+/************************************/
+/***************HEADER***************/
+/************************************/
+
+header{
+	background-color: white;
+	padding: 30px;
 }
 
 .search-bar{
@@ -28,7 +37,7 @@ header{
 	height: 40px;
 
 	background-color: white;
-	/* border: 1px solid; */
+	border: 1px solid;
 	border-radius: 0 10px 10px 0;
 }
 
@@ -53,4 +62,21 @@ input[name="search-bar"]:focus ~ button{
 
 	border: unset;
 	cursor: pointer;
+}
+
+/************************************/
+/****************MAIN****************/
+/************************************/
+
+main {
+	flex: 1;
+}
+
+/************************************/
+/***************FOOTER***************/
+/************************************/
+
+footer{
+	background-color: red;
+	padding: 30px;
 }
