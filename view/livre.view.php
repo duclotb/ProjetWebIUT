@@ -32,9 +32,9 @@
 
 <div class="right">
 	<div class="containerboutons">
-		<button type="button" class="boutonachat">Acheter</button> 
-		<button type="button" class="boutonlisteenvie">Ajouter à la liste d'envie</button> 	
-	</div>	
+		<a href="commande.ctrl.php" class="boutonachat">Acheter</a>
+		<button type="button" class="boutonlisteenvie">Ajouter à la liste d'envie</button>
+	</div>
 </div>
 
 </div>
@@ -43,4 +43,3 @@
 <?php
 	require_once('footer.view.php');
 ?>
-
