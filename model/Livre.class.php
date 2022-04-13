@@ -9,7 +9,7 @@ class Livre {
   private string $auteurFacultatifNom;
   private string $auteurFacultatifPrenom;
   private string $editeur;
-  private integer $anneeEdition;
+  private int $anneeEdition;
   private string $pages;
   private string $format;
   private string $section;
@@ -19,7 +19,7 @@ class Livre {
 
 
   //Constructeur
-  function __construct(string $numISBN, string $titre, string $sousTitre, string $auteurNom, string $auteurPrenom, string $auteurFalcutatifNom, string $auteurFalcutatifPrenom, string $editeur, integer $anneeEdition, string $pages, string $format, string $section, float $prix, string $synopsis, array $commentaires ) {
+  function __construct(string $numISBN, string $titre, string $sousTitre , string $auteurNom , string $auteurPrenom , string $auteurFacultatifNom , string $auteurFacultatifPrenom , string $editeur , int $anneeEdition, string $pages , string $format , string $section , float $prix, string $synopsis , array $commentaires) {
 
     $this->numISBN = $numISBN;
 
