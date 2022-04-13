@@ -12,32 +12,6 @@ require_once(dirname(__FILE__).'/globalDAO.php');
     }
 
 
-    function getTest() : Livre {     
-      $req = "SELECT * FROM livre WHERE isbn='2-09-211356-9'";
-      $pdo = $this -> db -> query($req);
-      $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
-
-      $prix = floatval($result[0]["prix"]);
-      $synopsis = "";
-      $commentaires = array();
-
-      if ($result[0]["auteurFalcutatifNom"] == null){
-        $auteurFacultatifNom = "";
-      } else {
-        $auteurFacultatifNom = $result[0]["auteurFalcutatifNom"];
-      }
-
-      if ($result[0]["auteurFalcutatifPrenom"] == null){
-        $auteurFacultatifPrenom = "";
-      } else {
-        $auteurFacultatifPrenom = $result[0]["auteurFalcutatifPrenom"];
-      }
-    
-      $livre = new Livre($result[0]["isbn"], $result[0]["titre"], $result[0]["sousTitre"], $result[0]["auteurNom"], $result[0]["auteurPrenom"], $auteurFacultatifNom, $auteurFacultatifPrenom, $result[0]["editeur"], $result[0]["anneeedition"], $result[0]["pages"], $result[0]["format"], $result[0]["section"], $prix, $synopsis, $commentaires);
-
-      return $livre;
-    }
-
     function getLivre(string $isbn) : Livre {     
       $req = "SELECT * FROM livre WHERE isbn='$isbn'";
       $pdo = $this -> db -> query($req);
@@ -66,7 +40,7 @@ require_once(dirname(__FILE__).'/globalDAO.php');
 
     function getCollectionLivres(int $offset, int $quantity){
 
-      // Permet de récupérer un nombre de livres $quantity à partir de (0+$offset élément) décalage $offset de la table livre.
+      // Permet de récupérer un nombre de livres $quantity à partir de 0+$offset éléments dans la table livre.
   
 
       $req = "SELECT isbn FROM livre LIMIT $quantity OFFSET $offset";
