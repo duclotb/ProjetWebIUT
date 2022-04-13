@@ -1,5 +1,5 @@
 <?php
-class listeEnvie() {
+class ListeEnvie {
 //Attributs
 private $livres = array();
 
@@ -16,9 +16,9 @@ public function addLivre(Livre $livre) {
 }
 
 //private
-private function deleteListeEnvie() {
+/*private function deleteListeEnvie() {
   unset($this);
-}
+}*/
 
 
 }
