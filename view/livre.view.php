@@ -4,8 +4,6 @@
 	require_once('header.view.php');
 ?>
 
-<div class="pageachat">
-
 <div class="left">
 	<div class = "topleft">
 		<h1> Titre du livre </h1><br>
@@ -37,7 +35,7 @@
 	</div>	
 </div>
 
-</div>
+
 
 
 <?php
