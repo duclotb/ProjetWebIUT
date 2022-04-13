@@ -22,7 +22,7 @@ $auteurnom = $livre->getAuteurNom();
 $titre = $livre->getTitre();
 $prix = $livre->getPrix();
 $synopsis = $livre->getSynopsis();
-$soustitre = $livre->getSousTitre();
+$genre = $livre->getSousTitre();
 $auteurfacultatifnom =$livre->getAuteurFacultatifNom();
 $auteurfacultatifprenom = $livre->getAuteurFacultatifPrenom();
 $anneeedition = $livre->getAnneeEdition();
@@ -34,6 +34,13 @@ $section = $livre->getSection();
 // Si les champs n'existent pas dans la BDD, afficher message
 if($auteurprenom == ''){
     $auteurprenom = "Prénom de l'auteur inconnu";
+
+    // A retravailler
+    if($auteurprenom == '' && $auteur !=''){
+        $auteurprenom = "M/Mme";
+
+    }
+
 }
 
 if($synopsis == ''){
@@ -42,9 +49,6 @@ if($synopsis == ''){
 
 if($auteurnom == ''){
     $auteurnom = "Nom de l'auteur inconnu";
-
-    
-
 }
 
 if($titre == ''){
@@ -89,7 +93,7 @@ $view->assign("auteurnom", $auteurnom);
 $view->assign("titre", $titre);
 $view->assign("prix",$prix);
 $view->assign("synopsis", $synopsis);
-$view->assign("soustitre", $soustitre);
+$view->assign("genre", $genre);
 $view->assign("auteurfacultatifnom",$auteurfacultatifnom);
 $view->assign("auteurfacultatifprenom", $auteurfacultatifprenom);
 $view->assign("anneeedition",$anneeedition);
@@ -105,8 +109,5 @@ $view -> display("livre.view.php");
 
 ?>
 
+<!-- si pas de prénom/nom afficher M/Mme X -->
 
-
-// afficher auteurs facultatifs
-// ajouter les if
-// si pas de prénom/nom afficher M/Mme X
