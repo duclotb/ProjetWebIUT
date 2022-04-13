@@ -10,7 +10,7 @@
 
 	$titre = $livre -> getTitre();
 
-	$livres = $dao -> getCollectionLivres(1,2);
+	$livres = $dao -> getCollectionLivres(0,100);
 
 	$titres = array();
 	$editeurs = array();
@@ -24,7 +24,7 @@
 		array_push($prix, $livre -> getPrix());
 	}
 
-	print_r($auteurs);
+	print_r($livres);
 
 
 ?>
