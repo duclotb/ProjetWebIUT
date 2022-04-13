@@ -47,16 +47,16 @@ require_once(dirname(__FILE__).'/globalDAO.php');
       $synopsis = "";
       $commentaires = array();
 
-      if ($result[0]["auteurFalcutatifNom"] == null){
+      if ($result[0]["auteurFacultatifNom"] == null){
         $auteurFacultatifNom = "";
       } else {
-        $auteurFacultatifNom = $result[0]["auteurFalcutatifNom"];
+        $auteurFacultatifNom = $result[0]["auteurFacultatifNom"];
       }
 
-      if ($result[0]["auteurFalcutatifPrenom"] == null){
+      if ($result[0]["auteurFacultatifPrenom"] == null){
         $auteurFacultatifPrenom = "";
       } else {
-        $auteurFacultatifPrenom = $result[0]["auteurFalcutatifPrenom"];
+        $auteurFacultatifPrenom = $result[0]["auteurFacultatifPrenom"];
       }
     
       $livre = new Livre($result[0]["isbn"], $result[0]["titre"], $result[0]["sousTitre"], $result[0]["auteurNom"], $result[0]["auteurPrenom"], $auteurFacultatifNom, $auteurFacultatifPrenom, $result[0]["editeur"], $result[0]["anneeedition"], $result[0]["pages"], $result[0]["format"], $result[0]["section"], $prix, $synopsis, $commentaires);
