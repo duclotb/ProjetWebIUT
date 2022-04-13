@@ -13,9 +13,9 @@
 				</div>
 				<div class="information">
 					<div class="foo">
-						<p><strong><?=$titres[$i]?></strong></p>
-						<p><i><?=$editeurs[$i]?></i></p>
-						<p><?=$auteurs[$i][0]?> <?=$auteurs[$i][1]?></p>
+						<p title="Titre : <?=$titres[$i]?>"><strong><?=$titres[$i]?></strong></p>
+						<p title="Editeur : <?=$editeurs[$i]?>"><i><?=$editeurs[$i]?></i></p>
+						<p title="Auteur : <?=$auteurs[$i][0]?> <?=$auteurs[$i][1]?>"><?=$auteurs[$i][0]?> <?=$auteurs[$i][1]?></p>
 					</div>
 					<div class="prix">
 						<p><?=$prix[$i]?> €</p>
