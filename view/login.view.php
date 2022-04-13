@@ -1,40 +1,43 @@
-<link rel="stylesheet" href="../view/assets/css/login.css">
+<link rel="stylesheet" href="../view/assets/css/connection-inscription.css">
 
 <?php
 	require_once('header.view.php');
 ?>
 
-<div class="title">
 
-<h2>LOGIN</h2>
 
-</div>
+<div class="container center">
 
-<div class="container_login">
+  <form action="index.html" method="post">
+    <fieldset>
 
-<form class="" action="index.html" method="post">
+      <div class="title">
 
-  <div class="mail">
+        <h2>Se connecter</h2>
 
-  <label for="mail">Mail:</label><br>
-  <input type="text" name="mail" id="mail">
+      </div>
 
-  </div>
+      <div>
 
-  <div class="mdp">
+        <label for="mail">Mail:</label><br>
+        <input type="email" name="mail" id="mail">
 
-  <label for="mdp">Mot de passe:</label><br>
-  <input type="text" name="mdp" id="mdp">
+      </div>
 
-  </div>
+      <div>
 
-<div class="submit_button">
+        <label for="mdp">Mot de passe:</label><br>
+        <input type="password" name="mdp" id="mdp">
 
-  <input type="submit" value="login">
+      </div>
 
-  </div>
 
-</form>
+      <input type="submit" value="Se connecter">
+
+    </fieldset>
+
+
+  </form>
 
 </div>
 

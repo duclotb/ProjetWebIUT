@@ -1,48 +1,50 @@
-<link rel="stylesheet" href="../view/assets/css/signIn.css">
+<link rel="stylesheet" href="../view/assets/css/connection-inscription.css">
 
 
 <?php
 	require_once('header.view.php');
 ?>
 
-<div class="title">
 
-	<h2>SIGN IN</h2>
-	
-</div>
 
-<div class="container_sign_in">
+<div class="container center">
 
-	<form class="sign_in" action="index.html" method="post">
+	<form action="index.html" method="post">
+		<fieldset>
 
-		<div class="prenom">
-			<label for="prenom">Prénom:</label><br>
-			<input type="text" name="mail" id="prenom">
-		</div>
+			<h2>S'incscire</h2>
 
-		<div class="nom">
-			<label for="nom">Nom:</label><br>
-			<input type="text" name="mail" id="nom">
-		</div>
 
-		<div class="mail">
-			<label for="mail">Mail:</label><br>
-			<input type="text" name="mail" id="mail">
-		</div>
+			<div>
+				<label for="prenom">Prénom :</label><br>
+				<input type="text" name="mail" id="prenom">
+			</div>
 
-		<div class="mdp">
-			<label for="mdp">Mot de passe:</label><br>
-			<input type="text" name="mail" id="mdp">
-		</div>
+			<div>
+				<label for="nom">Nom :</label><br>
+				<input type="text" name="mail" id="nom">
+			</div>
 
-		<div class="date_naissance">
-			<label for="date_naissance">Date de naissance:</label><br>
-			<input type="text" name="mail" id="date_naissance">
-		</div>
+			<div>
+				<label for="mail">Mail :</label><br>
+				<input type="email" name="mail" id="mail">
+			</div>
 
-		<div class="sign_in_button">
-			<input type="submit" value="sign in">
-		</div>
+			<div>
+				<label for="mdp">Mot de passe :</label><br>
+				<input type="password" name="mail" id="mdp">
+			</div>
+
+			<div>
+				<label for="date_naissance">Date de naissance :</label><br>
+				<input type="date" name="mail" id="date_naissance">
+			</div>
+
+			
+			<input type="submit" value="S'inscrire">
+
+		</fieldset>
+		
 
 	</form>
 </div>

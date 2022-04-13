@@ -1,0 +1,51 @@
+main{
+  height: 100%;
+}
+
+main .container{
+  height: 100%;
+}
+
+main h2{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+form fieldset{
+  padding: 2em;
+  border-radius: 10px;
+}
+
+form div{
+  margin-top: 2em;
+}
+
+form label {
+  /* font-family: Apple Chancery, cursive; */
+  /* font-family: GoghItalic; */
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+form input{
+  width: 100%;
+  padding: 5px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+input[type="submit"]{
+  height: 40px;
+  margin-top: 5em;
+  padding: 0 1em;
+  border: 1px solid;
+  border-radius: 0 10px 10px 0;
+
+  background-color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
