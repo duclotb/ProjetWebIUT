@@ -19,7 +19,7 @@ class Livre {
 
 
   //Constructeur
-  function __construct(string $numISBN = "", string $titre = "", string $sousTitre = "", string $auteurNom = "", string $auteurPrenom = "", string $auteurFacultatifNom = "", string $auteurFacultatifPrenom = "", string $editeur = "", string $anneeEdition = "", string $pages = "", string $format = "" , string $section = "", float $prix = 0.0, string $synopsis = "0", $commentaires) {
+  function __construct(string $numISBN = "", string $titre = "", string $sousTitre = "", string $auteurNom = "", string $auteurPrenom = "", string $auteurFacultatifNom = "", string $auteurFacultatifPrenom = "", string $editeur = "", string $anneeEdition = "", string $pages = "", string $format = "" , string $section = "", float $prix = 0.0, string $synopsis = "0", $commentaires = array()) {
 
     $this->numISBN = $numISBN;
 
