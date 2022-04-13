@@ -10,8 +10,9 @@
 
 	$titre = $livre -> getTitre();
 
-	$dao -> getCollectionLivres(1,2);
+	$livres = $dao -> getCollectionLivres(1,2);
 
+	print_r($livres);
 
 
 ?>
