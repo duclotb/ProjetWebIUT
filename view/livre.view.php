@@ -4,42 +4,43 @@
 	require_once('header.view.php');
 ?>
 
+<div class="pageachat">
 
-<div class = "container livre">
+<div class="left">
+	<div class = "topleft">
+		<h1> Titre du livre </h1><br>
+		<h3> Auteur : </h3>
 
-	<h1> Titre du livre </h1><br>
-	<h3> Auteur : XX </h3><br>
-		<div class = "imageachat">
-			<img src="../view/assets/images/imageTest.jpg" alt=""><br>
-		</div>
-	
-		<div class="descriptionarticle">
-			<p> Description de l'article: </p><br>
-		</div>	
+	</div>
 
-	<h2> Prix : 14.50€ <h2><br>
+	<div class="centerleft">
+		<img src="../view/assets/images/imageTest.jpg" alt="">
+	</div>
 
-	<button type="button" class="boutonachat">Acheter</button> 
-	<button type="button" class="boutonlisteenvie">Ajouter à la liste d'envie</button> 
+	<div class="bottomleft">
+		<p class="prix"> Prix : 14.50€</p>
+	</div>
+</div>
 
-</div>	
+<div class="center">
+	<div class="centrecenter">
+		<h2> Description du livre </h2><br>
+		<p> is similes sunt omnes, qui virtuti student levantur vitiis, levantur erroribus, nisi forte censes Ti. Quod quidem nobis non saepe contingit. Quae duo sunt, unum facit. Quo modo autem philosophus loquitur? Facillimum id quidem est, inquam. Nihil enim arbitror esse magna laude dignum, quod te praetermissurum credam aut mortis aut doloris metu. Maximas vero virtutes iacere omnis necesse est </p><br>
 
+	</div>
+</div>
 
+<div class="right">
+	<div class="containerboutons">
+		<button type="button" class="boutonachat">Acheter</button> 
+		<button type="button" class="boutonlisteenvie">Ajouter à la liste d'envie</button> 	
+	</div>	
+</div>
 
+</div>
 
 
 <?php
 	require_once('footer.view.php');
 ?>
 
-
-
-
-
-/* A ajouter : 
-- bouton
-- prix
-- Auteur
-- description du livre
-- bulle d'infor
-*/
