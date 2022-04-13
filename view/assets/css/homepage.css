@@ -43,15 +43,21 @@ div img{
 	justify-content: space-between;
 
 	padding: 0.5em;
+	height: 100px;
 }
 
 .foo{
-	width: 70%;
+	width: 80%;
 }
 
 .foo p{
 	padding-top: 5px;
 	text-align: left;
+
+	text-overflow: ellipsis;
+
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .prix{
