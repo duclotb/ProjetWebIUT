@@ -1,5 +1,6 @@
 <?php
-require_once(dirname(__FILE__).'/livre.class.php');
+require_once(dirname(__FILE__).'/Livre.class.php');
+require_once(dirname(__FILE__).'/globalDAO.php');
 
   // Le Data Access Objet
   class LivreDAO {
@@ -7,49 +8,34 @@ require_once(dirname(__FILE__).'/livre.class.php');
 
     // Constructeur chargé d'ouvrir la BD
     function __construct() {
-      $database = 'sqlite:'.dirname(__FILE__).'/../data/livre.db';
+      $this -> db = getDAO();
+    }
 
-      try {
-        $this -> db = new PDO($database);
-        if (!$this -> db) {die("Database error");}
-      } catch (PDOException $e) {
-        die("PDO Error :".$e -> getMessage()."$this -> database\n");
+
+    function getTest() : Livre {     
+      $req = "SELECT * FROM livre WHERE isbn='2-03-652407-9'";
+      $pdo = $this -> db -> query($req);
+      $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
+
+      $prix = floatval($result[0]["prix"]);
+      $synopsis = "";
+      $commentaires = array();
+
+      if ($result[0]["auteurFalcutatifNom"] == null){
+        $auteurFacultatifNom = "";
+      } else {
+        $auteurFacultatifNom = $result[0]["auteurFalcutatifNom"];
       }
 
-    }
+      if ($result[0]["auteurFalcutatifPrenom"] == null){
+        $auteurFacultatifPrenom = "";
+      } else {
+        $auteurFacultatifPrenom = $result[0]["auteurFalcutatifPrenom"];
+      }
+    
+      $livre = new Livre($result[0]["isbn"], $result[0]["titre"], $result[0]["sousTitre"], $result[0]["auteurNom"], $result[0]["auteurPrenom"], $auteurFacultatifNom, $auteurFacultatifPrenom, $result[0]["editeur"], $result[0]["anneeedition"], $result[0]["pages"], $result[0]["format"], $result[0]["section"], $prix, $synopsis, $commentaires);
 
-    // Accès à une musique
-    function get(int $id) : Music {
-
-      $req = "SELECT * FROM music WHERE id='$id'";
-
-      $pdo = $this -> db -> query($req);
-
-      $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
-
-      $music = new Music($result[0]["id"], $result[0]["author"], $result[0]["title"], $result[0]["cover"], $result[0]["mp3"], $result[0]["category"]);
-
-      return $music;
-
-    }
-
-    // Retourne l'idf minimum
-    function minId() : int {
-
-      $req = "SELECT min(id) as min FROM music";
-      $pdo = $this -> db -> query($req);
-      $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
-
-      return $result[0]["min"];
-    }
-
-    // Retourne l'idf maximum
-    function maxId() : int {
-      $req = "SELECT max(id) as max FROM music";
-      $pdo = $this -> db -> query($req);
-      $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
-
-      return $result[0]["max"];
+      return $livre;
     }
   }
 ?>
