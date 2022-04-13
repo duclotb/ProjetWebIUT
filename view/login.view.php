@@ -32,7 +32,7 @@
       </div>
 
 
-      <input type="submit" value="Se connecter">
+      <input type="submit" value="Se connecter" class="btn">
 
     </fieldset>
 

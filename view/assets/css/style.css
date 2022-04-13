@@ -47,6 +47,13 @@ a{
 	justify-content: center;
 }
 
+.btn{
+	height: 40px;
+	padding: 0 1em;
+	border: 1px solid;
+	border-radius: 0 10px 10px 0;
+}
+
 /************************************/
 /***************HEADER***************/
 /************************************/
@@ -82,12 +89,6 @@ header .container{
 	display: flex;
 	align-items: center;
 
-	height: 40px;
-
-	padding: 0 1em;
-
-	border: 1px solid;
-	border-radius: 0 10px 10px 0;
 }
 
 .search-bar{

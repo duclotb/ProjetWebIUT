@@ -37,11 +37,7 @@ form input:focus {
 }
 
 input[type="submit"]{
-  height: 40px;
   margin-top: 5em;
-  padding: 0 1em;
-  border: 1px solid;
-  border-radius: 0 10px 10px 0;
 
   background-color: white;
 

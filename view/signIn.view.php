@@ -41,7 +41,7 @@
 			</div>
 
 			
-			<input type="submit" value="S'inscrire">
+			<input type="submit" class="btn" value="S'inscrire">
 
 		</fieldset>
 		

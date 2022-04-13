@@ -18,8 +18,8 @@
 			<button type="submit"></button>
 		</form>
 		<div class="connect">
-			<a href="login.ctrl.php"><strong>Se connecter</strong></a>
-			<a href="signIn.ctrl.php"><strong>S'inscrire</strong></a>
+			<a href="login.ctrl.php" class="btn"><strong>Se connecter</strong></a>
+			<a href="signIn.ctrl.php" class="btn"><strong>S'inscrire</strong></a>
 		</div>
 	</div>
 </header>
