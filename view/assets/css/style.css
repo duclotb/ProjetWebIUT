@@ -52,6 +52,8 @@ a{
 	padding: 0 1em;
 	border: 1px solid;
 	border-radius: 0 10px 10px 0;
+
+	font-weight: bold;
 }
 
 /************************************/
