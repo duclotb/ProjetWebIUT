@@ -6,7 +6,7 @@ main{
 
 .left{
     display:flex;
-    width: 30em;
+    white-space: nowrap ;
     height: 50em;
     flex-direction: column;
 
@@ -29,8 +29,7 @@ main{
 }
 
 .topleft{
-    width: 100%;
-    height: 100px;
+    min-height: 100px;
 
 }
 
