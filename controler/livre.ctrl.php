@@ -42,6 +42,9 @@ if($synopsis == ''){
 
 if($auteurnom == ''){
     $auteurnom = "Nom de l'auteur inconnu";
+
+    
+
 }
 
 if($titre == ''){
