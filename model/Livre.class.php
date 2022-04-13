@@ -37,7 +37,7 @@ class Livre {
     $this->$pages = $pages;
     $this->$format = $format;
     $this->$section = $section;
-    
+
     $this->synopsis = $synopsis;
     $this->prix = $prix;
     $this->commentaires = $commentaires;
@@ -47,13 +47,48 @@ class Livre {
 
   //public
 
+  public function getSousTitre() {
+    return $this->sousTitre;
+  }
+
+  public function getAuteurNom() {
+    return $this->auteurNom;
+  }
+
+  public function getAuteurPrenom() {
+    return $this->auteurPrenom;
+  }
+
+  public function getAuteurFacultatifNom() {
+    return $this->auteurFacultatifNom;
+  }
+
+  public function getAuteurFacultatifPrenom() {
+    return $this->auteurFacultatifPrenom;
+  }
+
+  public function getEditeur() {
+    return $this->editeur;
+  }
+
+  public function getAnneeEdition() {
+    return $this->anneeEdition;
+  }
+
+  public function getPages() {
+    return $this->pages;
+  }
+
+public function getFormat() {
+  return $this->format;
+}
+
+public function getSection() {
+  return $this->section;
+}
 
   public function getTitre() {
     return $this->titre;
-  }
-
-  public function getAuteurs() {
-    return $this->auteurs;
   }
 
   public function getSynopsis() {
