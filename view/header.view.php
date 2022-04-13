@@ -12,6 +12,7 @@
 <header>
 	<div class="container space-between">
 		<h1>Le titre de notre site</h1>
+		<a href="login.ctrl.php"></a>
 		<form action="rechercher.ctrl.php" class="search-bar">
 			<input type="text" name="search-bar" id="" placeholder="Recherche un livre par mot clé">
 			<button type="submit"></button>
@@ -20,4 +21,3 @@
 </header>
 
 <main>
-	
