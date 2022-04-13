@@ -6,7 +6,7 @@
 <div class="container wrap space-between">
 
 	<?php for ($i = 0; $i < $nombre; $i++) :?>
-		<a href="livre.ctrl.php?id=XXX">
+		<a href="livre.ctrl.php?isbn=<?=htmlentities(urlencode("$isbn[$i]"))?>">
 			<article>
 				<div>
 					<img src="../view/assets/images/imageTest.jpg" alt="">
