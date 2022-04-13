@@ -1,48 +1,110 @@
-.boutonachat {
-    display: block;
-    width: 25%;
+.pageachat{
+    display:flex;
+
+}
+
+
+.left{
+    display:flex;
+    width: 30em;
+    height: 50em;
+    flex-direction: column;
+
+}
+
+.center{
+    display:flex;
+    width: 30em;
+    height: 50em;
+    flex-direction: column;
+    
+}
+
+.right{
+    display:flex;
+    width: 30em;
+    height: 50em;
+    flex-direction: column;
+
+}
+
+.topleft{
+    width: 100%;
+    height: 100px;
+
+}
+
+.centerleft{
+    display:flex;
+    width: 100%;
+    flex:2;    
+}
+
+.bottomleft{
+    display:flex;
+    width: 100%;Descri
+    margin:10px;
+}
+
+.centrecenter{
+    width: auto;
+    height: 100px;
+    margin-bottom:200px;
+
+}
+
+.topright{
+    display:flex;
+    width: auto;
+    height: 300px;
+    margin-top: 200px;
+    
+}
+
+button{
+    width: 150px;
     border: none;
     background-color: #04AA6D;
-    padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    margin-left: 75%;;
-    position:relative;
-    bottom:38em;
     border-radius: 10px; 
+    margin:0.5em;
+    width: 300px;
+    height:30px;
 }
+
+.containerboutons{
+    display:flex;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-left: 150px;
+
+}
+
+.prix{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 
 .boutonlisteenvie{
-    display: block;
-    width: 25%;
-    border: none;
     background-color: gray;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    margin-left: 75%;;
-    position:relative;
-    bottom:37em;
-    border-radius: 10px;
+
+}
+
+.boutonachat:hover{
+    opacity: 0.8;
+}
+
+.boutonlisteenvie:hover{
+    opacity: 0.8;
 }
 
 
-.descriptionarticle{
-    display:flex;
-    align-content: center;
-    justify-content: center;
-    margin-left: -20em;
-    position:relative;
-    bottom:20em;
-    font-weight: bold;
-
-
-    
-
-
-
+.center{
+    margin-left:50px;
 
 }
 
@@ -51,22 +113,4 @@
 
 
 
-
-
-
-
-//Pas sur de l'inclure.containerframe {
-    border: 2px solid gray;
-    position:relative;
-    margin-left: 75%;;
-    border-radius: 10px;
-    position:relative;
-    width: 14em;
-    height: 25%;
-    bottom: 30em;
-
-
-
-
-}
 

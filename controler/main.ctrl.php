@@ -8,7 +8,7 @@ require_once(__DIR__.'/../framework/view.fw.php');
 
 $dao = new LivreDAO();
 
-$livres = $dao -> getCollectionLivres(0, 10);
+$livres = $dao -> getCollectionLivres(0, 100);
 
 $titres = array();
 $editeurs = array();
