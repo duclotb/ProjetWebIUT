@@ -46,6 +46,11 @@ header{
 	padding: 30px;
 }
 
+header a {
+	width: 100px;
+	background-color: black;
+}
+
 .search-bar{
 	display: flex;
 	width: 400px;
