@@ -107,6 +107,12 @@ public function getSection() {
       return $this->commentaires;
   }
 
+  public function getAuteurs() {
+    $buffer = array();
+    array($buffer, $this -> auteurNom, $this->auteurPrenom, $this->auteurFacultatifNom, $this->auteurFacultatifPrenom);
+    return $buffer;
+  }
+
   /*public function getInformations() {
     $array = array();
     $titre = $this->getTitre();
