@@ -1,5 +1,6 @@
 <?php
 // Inclus le mini framework
+print("test");
 require_once('../model/globalDAO.php');
 require_once('../model/LivreDAO.class.php');
 
