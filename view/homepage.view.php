@@ -11,7 +11,7 @@
 			</div>
 			<div class="information">
 				<div class="foo">
-					<p><strong>Titre du livre</strong></p>
+					<p><strong><?=$titre?></strong></p>
 					<p><i>Editeur</i></p>
 					<p>Auteur</p>
 				</div>
