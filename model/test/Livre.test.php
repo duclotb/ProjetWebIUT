@@ -1,6 +1,6 @@
 <?php
 
-require_once('Livre.class.php');
+require_once('../Livre.class.php');
 
 $auteurs = array('Stendhal','Charlemagne');
 $synopsis = "Un homme qui tombe amoureux d'une femme";
