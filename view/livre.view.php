@@ -3,7 +3,7 @@
 <?php
 	require_once('header.view.php');
 ?>
-
+<div class="container space-between">
 <div class="left">
 	<div class = "topleft">
 		<h1> <?=$titre?> </h1><br>
@@ -47,6 +47,8 @@
 	</div>	
 </div>
 
+
+</div>
 
 <!-- Note : ajouter bouton "retour" -->
 
