@@ -110,7 +110,6 @@ public function getSection() {
   public function getAuteurs() {
     $buffer = array();
     array_push($buffer, $this->auteurNom, $this->auteurPrenom, $this->auteurFacultatifNom, $this->auteurFacultatifPrenom);
-    print_r($buffer);
     return $buffer;
   }
 
