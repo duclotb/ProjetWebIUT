@@ -64,15 +64,18 @@ require_once(dirname(__FILE__).'/globalDAO.php');
       return $livre;
     }
 
-    function getCollectionLivres(int $offset, int $number){
+    function getCollectionLivres(int $offset, int $quantity){
 
-      $req = "SELECT isbn FROM livre LIMIT $number OFFSET $offset";
+      // Permet de récupérer un nombre de livres $quantity à partir de (0+$offset élément) décalage $offset de la table livre.
+  
+
+      $req = "SELECT isbn FROM livre LIMIT $quantity OFFSET $offset";
       $pdo = $this -> db -> query($req);
       $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
 
       $buffer = array();
 
-      for ($i = 0; $i < $number; $i++){
+      for ($i = 0; $i < $quantity; $i++){
 
         array_push($buffer, $this -> getLivre($result[$i]['isbn']));
 
