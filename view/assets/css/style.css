@@ -4,9 +4,19 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: Gogh;
+	src: url("../fonts/Gogh-ExtraBold.otf");
+}
+
+@font-face {
+	font-family: GoghItalic;
+	src: url("../fonts/Gogh-ExtraBoldItalic.otf");
+}
+
 body {
 	min-height: 100vh;
-	background-color: greenyellow;
+	background-color: white;
 
 	display: flex;
 	flex-direction: column;
@@ -41,19 +51,17 @@ a{
 /***************HEADER***************/
 /************************************/
 
-@font-face {
-	font-family: Gogh;
-	src: url("../fonts/Gogh-ExtraBold.otf");
-}
-
 header{
 	background-color: white;
 	padding: 30px;
+	border-bottom: 1px solid black;
 }
 
 header h1{
 	font-family: Gogh;
 }
+
+
 
 header > div {
 	align-items: center;
