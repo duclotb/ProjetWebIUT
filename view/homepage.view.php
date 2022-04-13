@@ -4,23 +4,26 @@
 	require_once('header.view.php');
 ?>
 <div class="container wrap space-between">
-	<a href="livre.ctrl.php?id=XXX">
-		<article>
-			<div>
-				<img src="../view/assets/images/imageTest.jpg" alt="">
-			</div>
-			<div class="information">
-				<div class="foo">
-					<p><strong><?=$titre?></strong></p>
-					<p><i>Editeur</i></p>
-					<p>Auteur</p>
+
+	<?php for ($i = 0; $i < $nombre; $i++) :?>
+		<a href="livre.ctrl.php?id=XXX">
+			<article>
+				<div>
+					<img src="../view/assets/images/imageTest.jpg" alt="">
 				</div>
-				<div class="prix">
-					<p>14.50 €</p>
+				<div class="information">
+					<div class="foo">
+						<p><strong><?=$titres[$i]?></strong></p>
+						<p><i><?=$editeurs[$i]?></i></p>
+						<p><?=$auteurs[$i][0]?> <?=$auteurs[$i][1]?></p>
+					</div>
+					<div class="prix">
+						<p><?=$prix[$i]?> €</p>
+					</div>
 				</div>
-			</div>
-		</article>
-	</a>
+			</article>
+		</a>
+	<?php endfor ?>
 
 <?php
 	require_once('footer.view.php');

@@ -19,7 +19,7 @@ class Livre {
 
 
   //Constructeur
-  function __construct(string $numISBN, string $titre, string $sousTitre , string $auteurNom , string $auteurPrenom , string $auteurFacultatifNom , string $auteurFacultatifPrenom , string $editeur , int $anneeEdition, string $pages , string $format , string $section , float $prix, string $synopsis , array $commentaires) {
+  function __construct(string $numISBN = "", string $titre = "", string $sousTitre = "", string $auteurNom = "", string $auteurPrenom = "", string $auteurFacultatifNom = "", string $auteurFacultatifPrenom = "", string $editeur = "", int $anneeEdition = 0, string $pages = "", string $format = "" , string $section = "", float $prix = 0.0, string $synopsis = "0", $commentaires) {
 
     $this->numISBN = $numISBN;
 
@@ -32,11 +32,11 @@ class Livre {
     $this->auteurFacultatifNom = $auteurFacultatifNom;
     $this->auteurFacultatifPrenom = $auteurFacultatifPrenom;
 
-    $this->$editeur = $editeur;
-    $this->$anneeEdition = $anneeEdition;
-    $this->$pages = $pages;
-    $this->$format = $format;
-    $this->$section = $section;
+    $this->editeur = $editeur;
+    $this->anneeEdition = $anneeEdition;
+    $this->pages = $pages;
+    $this->format = $format;
+    $this->section = $section;
 
     $this->synopsis = $synopsis;
     $this->prix = $prix;
@@ -109,7 +109,8 @@ public function getSection() {
 
   public function getAuteurs() {
     $buffer = array();
-    array($buffer, $this -> auteurNom, $this->auteurPrenom, $this->auteurFacultatifNom, $this->auteurFacultatifPrenom);
+    array_push($buffer, $this->auteurNom, $this->auteurPrenom, $this->auteurFacultatifNom, $this->auteurFacultatifPrenom);
+    print_r($buffer);
     return $buffer;
   }
 
