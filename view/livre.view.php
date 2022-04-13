@@ -30,7 +30,7 @@
 
 <div class="right">
 	<div class="containerboutons">
-		<a href="commande.ctrl.php" class="boutonachat">Acheter</a>
+		<a href="panier.ctrl.php" class="boutonachat">Acheter</a>
 		<button type="button" class="boutonlisteenvie">Ajouter à la liste d'envie</button>
 	</div>
 </div>
