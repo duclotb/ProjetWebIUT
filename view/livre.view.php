@@ -42,8 +42,8 @@
 
 <div class="right">
 	<div class="containerboutons">
-		<button type="button" class="boutonachat" class="btn">Ajouter au panier</button> 
-		<button type="button" class="boutonlisteenvie" class="btn">Ajouter à la liste d'envie</button> 	
+		<button type="button" class="boutonachat btn">Ajouter au panier</button> 
+		<button type="button" class="boutonlisteenvie btn">Ajouter à la liste d'envie</button> 	
 	</div>	
 </div>
 
