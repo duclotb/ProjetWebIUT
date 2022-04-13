@@ -59,7 +59,7 @@ require_once(dirname(__FILE__).'/globalDAO.php');
 
     }
 
-    function getLivresKeywords(string $str){
+    function getLivresKeyword(string $str){
 
       $req = "SELECT isbn FROM livre WHERE titre LIKE '%$str%' OR soustitre LIKE '%$str%' OR auteurNom LIKE '%$str%' OR auteurPrenom LIKE '%$str%' OR auteurFacultatifNom LIKE '%$str%' OR auteurFacultatifPrenom LIKE '%$str%' OR anneeedition LIKE '%$str%'";
 
