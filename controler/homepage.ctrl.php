@@ -5,9 +5,28 @@ require_once('../model/LivreDAO.class.php');
 
 require_once(__DIR__.'/../framework/view.fw.php');
 
+$keywords = $_GET['keywords'] ?? "";
 $dao = new LivreDAO();
 
-$livres = $dao -> getCollectionLivres(0, 100);
+if ($keywords == ""){
+	$livres = $dao -> getCollectionLivres(0, 100);
+} else {
+	$arrKeywords = explode(' ', $keywords);
+	$livres = array();
+	foreach ($arrKeywords as $key => $word) {
+
+		
+		$buffer = $dao -> getLivresKeyword($word);
+
+		
+		foreach ($buffer as $oldISBN => $livre) {
+			$buffer[$buffer[$oldISBN]->getNumISBN()] = $buffer[$oldISBN];
+			unset($buffer[$oldISBN]);
+		}
+
+		$livres = array_merge($livres, $buffer);
+	}
+}
 
 $isbn = array();
 $titres = array();

@@ -82,17 +82,17 @@ header > div {
 	margin: 0 5em;
 }
 
-input[name="search-bar"]{
+input[name="keywords"]{
 	height: 100%;
 	width: 100%;
 	padding-left: 1em;
 	border: unset;
 }
 
-input[name="search-bar"]:focus{
+input[name="keywords"]:focus{
 	outline: none;
 }
-input[name="search-bar"]:focus ~ button{
+input[name="keywords"]:focus ~ button{
 	background: url("../images/search-icon-focus.svg") center/contain no-repeat;
 }
 
