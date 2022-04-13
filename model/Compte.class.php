@@ -43,9 +43,9 @@ public function isAdmin() {
   //returns bool
 }
 
-public function deleteAccount() {
+/*public function deleteAccount() {
 unset($this);
-}
+}*/
 
 public function getMdp() {
   return $this->mdp;
