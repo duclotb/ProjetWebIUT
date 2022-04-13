@@ -2,14 +2,15 @@
 class Panier {
 //Attributs
 private $livres = array();
-private Compte $compte;
 private float $prixGlobal;
 
 //constructeur
-function __construct(array $livres, Compte $compte) {
-  $this->livre = $livres;
-  $this->compte = $compte;
+function __construct(array $livres) {
+  $this->livres = $livres;
   $this->prixGlobal = 0;
+  foreach($livres as $value) {
+  $this->prixGlobal += $value;
+  }
 }
 
 //Méthodes
@@ -17,7 +18,11 @@ function __construct(array $livres, Compte $compte) {
 //public
 public function addPanier(Livre $livre) {
   array_push($this->livres, $livre);
-  $prixGlobal += $livre->getPrix();
+  $this->prixGlobal += $livre->getPrix();
+}
+
+public function getPrixGlobal() {
+  return $this->prixGlobal;
 }
 
 public function getLivres() {
@@ -25,9 +30,9 @@ public function getLivres() {
   //returns Collection<Livre>
 }
 
-public function deletePanier() {
+/*public function deletePanier() {
   unset($this);
-}
+}*/
 
 
 

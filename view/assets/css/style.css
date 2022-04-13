@@ -41,37 +41,71 @@ a{
 /***************HEADER***************/
 /************************************/
 
+@font-face {
+	font-family: Gogh;
+	src: url("../fonts/Gogh-ExtraBold.otf");
+}
+
 header{
 	background-color: white;
 	padding: 30px;
 }
 
-header a {
-	width: 100px;
-	background-color: black;
+header h1{
+	font-family: Gogh;
+}
+
+header > div {
+	align-items: center;
+}
+
+header .container{
+	max-width: 1600px;
+}
+
+.connect{
+	display: flex;
+	justify-content: space-between;
+
+	gap: 2em;
+}
+
+.connect a {
+	display: flex;
+	align-items: center;
+
+	height: 40px;
+
+	padding: 0 1em;
+
+	border: 1px solid;
+	border-radius: 0 10px 10px 0;
 }
 
 .search-bar{
 	display: flex;
-	width: 400px;
+	flex: 1;
+	/* width: 400px; */
 	height: 40px;
 
 	background-color: white;
 	border: 1px solid;
 	border-radius: 0 10px 10px 0;
+
+	margin: 0 5em;
 }
 
-input[name="search-bar"]{
+input[name="keywords"]{
 	height: 100%;
 	width: 100%;
 	padding-left: 1em;
 	border: unset;
 }
 
-input[name="search-bar"]:focus{
+input[name="keywords"]:focus{
 	outline: none;
 }
-input[name="search-bar"]:focus ~ button{
+input[name="keywords"]:focus ~ button{
 	background: url("../images/search-icon-focus.svg") center/contain no-repeat;
 }
 

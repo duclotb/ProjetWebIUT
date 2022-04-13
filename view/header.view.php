@@ -5,19 +5,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../view/assets/css/style.css">
-	<title>Document</title>
+	<title>ATLAS</title>
 </head>
 <body>
 
 <header>
 	<div class="container space-between">
-		<h1>Le titre de notre site</h1>
-		<a href="login.ctrl.php"></a>
-		<a href="signIn.ctrl.php"></a>
-		<form action="rechercher.ctrl.php" class="search-bar">
-			<input type="text" name="search-bar" id="" placeholder="Recherche un livre par mot clé">
+		
+		<h1><a href="homepage.ctrl.php">ATLAS</a></h1>
+		<form action="homepage.ctrl.php" class="search-bar" method="get">
+			<input type="text" name="keywords" id="" placeholder="Recherche un livre par mot clé">
 			<button type="submit"></button>
 		</form>
+		<div class="connect">
+			<a href="login.ctrl.php"><strong>Se connecter</strong></a>
+			<a href="signIn.ctrl.php"><strong>S'inscrire</strong></a>
+		</div>
 	</div>
 </header>
 

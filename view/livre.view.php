@@ -30,9 +30,15 @@
 
 <div class="right">
 	<div class="containerboutons">
+<<<<<<< HEAD
 		<button type="button" class="boutonachat">Ajouter au panier</button> 
 		<button type="button" class="boutonlisteenvie">Ajouter à la liste d'envie</button> 	
 	</div>	
+=======
+		<a href="panier.ctrl.php" class="boutonachat">Acheter</a>
+		<button type="button" class="boutonlisteenvie">Ajouter à la liste d'envie</button>
+	</div>
+>>>>>>> da273af5b413880a712a1c85f6826fbc4a30c8a0
 </div>
 
 
@@ -41,4 +47,3 @@
 <?php
 	require_once('footer.view.php');
 ?>
-
