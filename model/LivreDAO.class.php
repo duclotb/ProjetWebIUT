@@ -81,5 +81,24 @@ require_once(dirname(__FILE__).'/globalDAO.php');
       return $buffer;
 
     }
+
+    function getLivresKeywords(string $str){
+
+      $req = "SELECT isbn FROM livre WHERE titre LIKE '%$str%' OR soustitre LIKE '%$str%' OR auteurNom LIKE '%$str%' OR auteurPrenom LIKE '%$str%' OR auteurFacultatifNom LIKE '%$str%' OR auteurFacultatifPrenom LIKE '%$str%' OR anneeedition LIKE '%$str%'";
+
+      $pdo = $this -> db -> query($req);
+      $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
+
+      $buffer = array();
+
+      for ($i = 0; $i < count($result); $i++){
+
+        array_push($buffer, $this -> getLivre($result[$i]['isbn']));
+
+      } 
+      
+      return $buffer;
+
+    }
   }
 ?>
