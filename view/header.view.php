@@ -5,13 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../view/assets/css/style.css">
-	<title>Document</title>
+	<title>ATLAS</title>
 </head>
 <body>
 
 <header>
 	<div class="container space-between">
-		<h1>Le titre de notre site</h1>
+		
+		<h1><a href="homepage.ctrl.php">ATLAS</a></h1>
 		<form action="homepage.ctrl.php" class="search-bar" method="get">
 			<input type="text" name="keywords" id="" placeholder="Recherche un livre par mot clé">
 			<button type="submit"></button>
