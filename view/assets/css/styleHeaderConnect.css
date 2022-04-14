@@ -1,0 +1,154 @@
+*, ::after, ::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Gogh;
+	src: url("../fonts/Gogh-ExtraBold.otf");
+}
+
+@font-face {
+	font-family: GoghItalic;
+	src: url("../fonts/Gogh-ExtraBoldItalic.otf");
+}
+
+body {
+	min-height: 100vh;
+	background-color: white;
+
+	display: flex;
+	flex-direction: column;
+}
+
+a{
+	text-decoration: unset;
+	color: unset;
+}
+
+.space-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+.container{
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
+}
+
+.btn{
+	height: 40px;
+	padding: 0 1em;
+	border: 1px solid;
+	border-radius: 0 10px 10px 0;
+
+	background-color: white;
+
+	font-weight: bold;
+}
+
+.btn:hover{
+	background-color: rgba(56, 56, 56, 0.2);
+}
+
+/************************************/
+/***************HEADER***************/
+/************************************/
+
+header{
+	background-color: white;
+	padding: 30px;
+	border-bottom: 1px solid black;
+}
+
+header h1{
+	font-family: Gogh;
+}
+
+
+
+header > div {
+	align-items: center;
+}
+
+header .container{
+	max-width: 1600px;
+}
+
+.connect{
+	display: flex;
+	justify-content: space-between;
+
+	gap: 2em;
+}
+
+.connect a {
+	display: flex;
+	align-items: center;
+
+}
+
+.search-bar{
+	display: flex;
+	flex: 1;
+	/* width: 400px; */
+	height: 40px;
+
+	background-color: white;
+	border: 1px solid;
+	border-radius: 0 10px 10px 0;
+
+	margin: 0 5em;
+}
+
+input[name="keywords"]{
+	height: 100%;
+	width: 100%;
+	padding-left: 1em;
+	border: unset;
+}
+
+input[name="keywords"]:focus{
+	outline: none;
+}
+input[name="keywords"]:focus ~ button{
+	background: url("../images/search-icon-focus.svg") center/contain no-repeat;
+}
+
+.search-bar button{
+	height: 100%;
+	width: 60px;
+	background: url("../images/search-icon.svg") center/contain no-repeat;
+
+	border: unset;
+	cursor: pointer;
+}
+
+/************************************/
+/****************MAIN****************/
+/************************************/
+
+main {
+	flex: 1;
+	padding: 30px;
+}
+
+/************************************/
+/***************FOOTER***************/
+/************************************/
+
+footer{
+	background-color: red;
+	padding: 30px;
+}

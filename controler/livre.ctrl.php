@@ -35,7 +35,7 @@ $imageURL = $livre -> getImageURL();
 
 // Si les champs n'existent pas dans la BDD, afficher message
 if($auteurprenom == ''){
-    $auteurprenom = "Prénom de l'auteur inconnu";
+    $auteurprenom = "Non définis";
 
     // A retravailler
     if($auteurprenom == '' && $auteurnom !=''){
@@ -48,7 +48,7 @@ if($synopsis == ''){
 }
 
 if($auteurnom == ''){
-    $auteurnom = "Nom de l'auteur inconnu";
+    $auteurnom = "Non définis";
 }
 
 if($titre == ''){
