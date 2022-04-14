@@ -1,4 +1,4 @@
-CREATE TABLE commande(
+CREATE TABLE panier(
    isbn CHAR(50),
    mail CHAR(50),
    PRIMARY KEY(isbn, mail),
