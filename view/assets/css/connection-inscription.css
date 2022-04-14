@@ -12,6 +12,7 @@ main h2{
 }
 
 form fieldset{
+  width: 300px;
   padding: 2em;
   border-radius: 10px;
 }
