@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS compte(
    PRIMARY KEY(mail)
 );
 
-INSERT INTO compte (mail, prenom, nom, dateNaissance, mdp, admin) VALUES ("admin", "", "", 0-0-0, "admin", true);
+INSERT INTO compte (mail, prenom, nom, dateNaissance, mdp, admin) VALUES ("admin@admin", "", "", 0-0-0, "admin", true);
