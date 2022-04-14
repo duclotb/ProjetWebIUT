@@ -10,7 +10,7 @@
     $mail = $_SESSION["mail"];
     $compte = $dao -> getCompte($mail);
 
-
+    //comentaire
 
     //Informations à récupérer
     $nom = $compte->getNom();
