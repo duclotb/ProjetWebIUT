@@ -159,6 +159,21 @@ main {
 /************************************/
 
 footer{
-	background-color: red;
+	font-family: Palatino Linotype;
+	font-size: 18;
+	background: linear-gradient(0deg, rgba(162,156,156,1) 35%, rgba(142,139,139,1) 100%);
+	border-top: 1px solid;
 	padding: 30px;
+}
+
+footer ul{
+	list-style: none;
+}
+
+.paiement ul li{
+	padding-left: 1.5em;
+}
+
+footer .container > div{
+	margin: auto 0;
 }
