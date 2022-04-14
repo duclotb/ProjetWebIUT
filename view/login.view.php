@@ -8,7 +8,7 @@
 
 <div class="container center">
 
-  <form action="index.html" method="post">
+  <form action="testLogin.ctrl.php" method="post">
     <fieldset>
 
       <div class="title">
@@ -33,6 +33,8 @@
 
 
       <input type="submit" value="Se connecter" class="btn">
+      <br>
+      <?=$messagerefusconnexion?>
 
     </fieldset>
 

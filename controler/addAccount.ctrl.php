@@ -12,7 +12,7 @@
 
 	$compte = $dao -> getCompte($mail);
 
-
+	
 	$view = new View();
 
 	if ($compte){
