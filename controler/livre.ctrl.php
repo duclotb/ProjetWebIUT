@@ -30,6 +30,8 @@ $pages = $livre->getPages();
 $editeur = $livre->getEditeur();
 $format = $livre->getFormat();
 $section = $livre->getSection();
+$synopsis = $livre -> getSynopsis();
+$imageURL = $livre -> getImageURL();
 
 // Si les champs n'existent pas dans la BDD, afficher message
 if($auteurprenom == ''){
@@ -101,6 +103,8 @@ $view->assign("pages",$pages);
 $view->assign("format",$format);
 $view->assign("editeur",$editeur);
 $view->assign("section",$section);
+$view -> assign("synopsis", $synopsis);
+$view -> assign("imageURL", $imageURL);
 
 //A supprimer, utilisée pour afficher toutes les informations de la variable
 //var_dump($livre);

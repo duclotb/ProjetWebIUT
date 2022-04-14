@@ -15,11 +15,12 @@ class Livre {
   private string $section;
   private float $prix;
   private string $synopsis;
+  private string $imageURL;
   private $commentaires = array();
 
 
   //Constructeur
-  function __construct(string $numISBN = "", string $titre = "", string $sousTitre = "", string $auteurNom = "", string $auteurPrenom = "", string $auteurFacultatifNom = "", string $auteurFacultatifPrenom = "", string $editeur = "", string $anneeEdition = "", string $pages = "", string $format = "" , string $section = "", float $prix = 0.0, string $synopsis = "0", $commentaires = array()) {
+  function __construct(string $numISBN = "", string $titre = "", string $sousTitre = "", string $auteurNom = "", string $auteurPrenom = "", string $auteurFacultatifNom = "", string $auteurFacultatifPrenom = "", string $editeur = "", string $anneeEdition = "", string $pages = "", string $format = "" , string $section = "", float $prix = 0.0, string $synopsis = "", string $imageURL = "") {
 
     $this->numISBN = $numISBN;
 
@@ -40,7 +41,7 @@ class Livre {
 
     $this->synopsis = $synopsis;
     $this->prix = $prix;
-    $this->commentaires = $commentaires;
+    $this->imageURL = $imageURL;
   }
 
   //Méthodes
@@ -93,6 +94,10 @@ public function getSection() {
 
   public function getSynopsis() {
     return $this->synopsis;
+  }
+
+  public function getImageURL() {
+    return $this->imageURL;
   }
 
   public function getPrix() {
