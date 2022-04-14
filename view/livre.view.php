@@ -40,9 +40,9 @@
 	<div class="right">
 
 		<div>
-			<button type="button" class="btn">Ajouter au panier</button> 
-			<button type="button" class="btn">Ajouter à la liste d'envie</button> 	
-		</div>	
+			<a href="panier.ctrl.php"> <button type="button" class="btn"> Ajouter au panier</button></a>
+			<a href="panier.ctrl.php"><button type="button" class="btn">  Ajouter à la liste d'envie</button></a>
+		</div>
 
 		<div>
 			<p class="prix"> Prix : <?=$prix?> €</p>
