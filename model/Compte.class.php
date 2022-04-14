@@ -24,7 +24,7 @@ function __construct(int $niveau, string $mail, string $nom, string $prenom, str
 //Méthodes
 
 //public
-public function getOrder(int $id) {
+public function getOrder(int $id) {$dateNaissance;
   return $this->commande[$id];
   //returns Commande
 }
@@ -80,6 +80,10 @@ public function getPrenom() {
 
 public function getMail() {
   return $this->mail;
+}
+
+public function getDateNaissance(){
+  return $this->dateNaissance;
 }
 
 public function addPanier(Livre $livre) {

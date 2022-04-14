@@ -3,6 +3,7 @@
 	require_once('header.view.php');
 ?>
 
+?>
 
 <h1>En cours de développement</h1>
 

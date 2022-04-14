@@ -11,7 +11,7 @@ require_once(dirname(__FILE__).'/globalDAO.php');
       $this -> db = getDAO();
     }
 
-
+  
     function getLivre(string $isbn) : Livre {     
       $req = "SELECT * FROM livre WHERE isbn='$isbn'";
       $pdo = $this -> db -> query($req);

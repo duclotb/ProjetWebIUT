@@ -34,7 +34,10 @@
 
       <input type="submit" value="Se connecter" class="btn">
       <br>
-      <?=$messagerefusconnexion?>
+      
+      <div class="existepas">
+          <?=$messagerefusconnexion?>
+      </div> 
 
     </fieldset>
 
