@@ -23,6 +23,7 @@ if (!$compte){
 
 else {
     $_SESSION["mail"] = $mail;
+    $_SESSION["prenom"] = $compte -> getPrenom();
     include("homepage.ctrl.php");
 }
 
