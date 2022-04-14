@@ -21,11 +21,17 @@
 		$view -> display("signUpRejected.view.php");
 	} else {
 		$dao -> insertCompte($_POST);
+
+		$_SESSION["mail"] = $_POST["mail"];
+		$_SESSION["prenom"] = $_POST["prenom"];
 		
 		$view -> assign("nom", $_POST["nom"]);
 		$view -> assign("prenom", $_POST["prenom"]);
 		$view -> assign("dateNaissance", $_POST["dateNaissance"]);
 		$view -> assign("mail", $_POST["mail"]);
+
+
+
 		$view -> display("signUpAccepted.view.php");
 	}
 
