@@ -11,5 +11,7 @@ CREATE TABLE livre (
 	pages STRING,
 	format STRING,
 	section STRING,
-	prix NUMERIC
+	prix NUMERIC,
+	imageURL STRING,
+	synopsis TEXT
 );

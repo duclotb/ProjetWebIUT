@@ -9,7 +9,7 @@
 		<a href="livre.ctrl.php?isbn=<?=htmlentities(urlencode("$isbn[$i]"))?>">
 			<article>
 				<div>
-					<img src="../view/assets/images/imageTest.jpg" alt="">
+					<img src="<?=$imageURLs[$i]?>" alt="">
 				</div>
 				<div class="information">
 					<div class="foo">
