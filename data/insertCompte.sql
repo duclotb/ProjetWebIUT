@@ -1,0 +1,1 @@
+INSERT INTO compte (mail, prenom, nom, dateNaissance, mdp) values ("toto@gmail.com", "t", "t", 2000-02-03, "ff");
