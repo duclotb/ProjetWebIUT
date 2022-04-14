@@ -16,7 +16,7 @@
 	$view = new View();
 
 	if ($compte){
-		$view -> assign("message", "Votre compte éxiste déjà");
+		$view -> assign("message", "Votre compte existe déjà");
 		$view -> display("signUpRejected.view.php");
 	} else {
 		$dao -> insertCompte($_POST);
