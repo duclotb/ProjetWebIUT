@@ -1,5 +1,6 @@
 <?php
 // Inclut le mini framework
+require_once('../config.php');
 require_once(__DIR__.'/../framework/view.fw.php');
 require_once('../model/globalDAO.php');
 require_once('../model/CompteDAO.class.php');
@@ -21,8 +22,8 @@ if (!$compte){
 }
 
 else {
-    session_start();
     $_SESSION["mail"] = $mail;
+    $_SESSION["prenom"] = $compte -> getPrenom();
     include("homepage.ctrl.php");
 }
 

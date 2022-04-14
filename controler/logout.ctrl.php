@@ -3,8 +3,9 @@
 require_once('../config.php');
 require_once(__DIR__.'/../framework/view.fw.php');
 
-$view = new View();
+session_destroy();
 
-$view -> display("signUp.view.php");
+header('Location: homepage.ctrl.php');
+
 
 ?>

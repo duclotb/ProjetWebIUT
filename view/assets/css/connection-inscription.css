@@ -33,9 +33,6 @@ form input{
   padding: 5px;
 }
 
-form input:focus {
-  outline: none;
-}
 
 input[type="submit"]{
   margin-top: 5em;

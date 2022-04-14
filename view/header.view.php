@@ -23,8 +23,10 @@
 			<a href="login.ctrl.php" class="btn"><strong>Se connecter</strong></a>
 			<a href="signUp.ctrl.php" class="btn"><strong>S'inscrire</strong></a>
 			<?php else : ?>
-			<a href="panier.ctrl.php"><img src="../view/assets/images/panier-icon.svg"/></a>
+			<p>Bonjour <?=$_SESSION["prenom"]?></p>
+			<a href="panier.ctrl.php" id="cart"><img src="../view/assets/images/panier-icon.svg"/></a>
 			<a href="compte.ctrl.php" class="btn"><strong>Compte</strong></a>
+			<a href="logout.ctrl.php" class="btn"><strong>Se déconnecter</strong></a>
 			<?php endif ?>
 		</div>
 	</div>
