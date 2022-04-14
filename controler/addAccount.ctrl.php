@@ -1,5 +1,6 @@
 <?php
 
+	require_once('../config.php');
 	require_once('../model/globalDAO.php');
 	require_once('../model/CompteDAO.class.php');
 

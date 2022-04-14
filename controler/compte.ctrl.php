@@ -1,6 +1,6 @@
 <?php
 
-
+require_once('../config.php');
 require_once('../model/globalDAO.php');
 require_once('../model/LivreDAO.class.php');
 require_once('../model/ListeEnvie.class.php');

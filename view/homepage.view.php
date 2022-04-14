@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../view/assets/css/homepage.css">
 
 <?php
-	// require_once('headerConnect.view.php');
 	require_once('header.view.php');
 ?>
 <div class="container wrap space-between">
@@ -10,7 +9,7 @@
 		<a href="livre.ctrl.php?isbn=<?=htmlentities(urlencode("$isbn[$i]"))?>">
 			<article>
 				<div>
-					<img src="<?=$imageURLs[$i]?>" alt="">
+					<img src="<?=$imageURLs[$i]?>" alt="" loading="lazy">
 				</div>
 				<div class="information">
 					<div class="foo">
