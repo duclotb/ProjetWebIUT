@@ -21,10 +21,7 @@ if (!$compte){
 }
 
 else {
-    $view ->display("homepage.view.php");
-
-    
-
+    include("homepage.ctrl.php");
 }
 
 
