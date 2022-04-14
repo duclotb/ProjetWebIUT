@@ -5,38 +5,15 @@ require_once('../model/LivreDAO.class.php');
 
 require_once(__DIR__.'/../framework/view.fw.php');
 
-$keywords = $_GET['keywords'] ?? "";
 $dao = new LivreDAO();
 
-if ($keywords == ""){
-	$livres = $dao -> getCollectionLivres(0, 120);
-
-
-} else {
-	$arrKeywords = explode(' ', $keywords);
-	$livres = array();
-	foreach ($arrKeywords as $key => $word) {
-
-
-		$buffer = $dao -> getLivresKeyword($word);
-
-
-		foreach ($buffer as $oldISBN => $livre) {
-			$buffer[$buffer[$oldISBN]->getNumISBN()] = $buffer[$oldISBN];
-			unset($buffer[$oldISBN]);
-		}
-
-		$livres = array_merge($livres, $buffer);
-	}
-}
+$livres = $dao -> getCollectionLivres(0, 100);
 
 $isbn = array();
 $titres = array();
 $editeurs = array();
 $auteurs = array();
 $prix = array();
-$synopsis = array();
-$imageURLs = array();
 
 foreach ($livres as $key => $livre) {
 	array_push($isbn, $livre -> getNumISBN());
@@ -44,7 +21,6 @@ foreach ($livres as $key => $livre) {
 	array_push($editeurs, $livre -> getEditeur());
 	array_push($auteurs, $livre -> getAuteurs());
 	array_push($prix, $livre -> getPrix());
-	array_push($imageURLs, $livre -> getImageURL());
 }
 
 
@@ -55,7 +31,6 @@ $view -> assign("titres", $titres);
 $view -> assign("editeurs", $editeurs);
 $view -> assign("auteurs", $auteurs);
 $view -> assign("prix", $prix);
-$view -> assign("imageURLs", $imageURLs);
 
 $view -> assign("nombre", count($livres));
 
