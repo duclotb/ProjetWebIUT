@@ -38,11 +38,9 @@ if($auteurprenom == ''){
     $auteurprenom = "Prénom de l'auteur inconnu";
 
     // A retravailler
-    if($auteurprenom == '' && $auteur !=''){
+    if($auteurprenom == '' && $auteurnom !=''){
         $auteurprenom = "M/Mme";
-
     }
-
 }
 
 if($synopsis == ''){
@@ -70,22 +68,26 @@ if($auteurfacultatifprenom == ''){
 }
 
 if($anneeedition == ''){
-    $anneeedition = "";
+    $anneeedition = "Inconnu";
 }
 
 if($pages == ''){
-    $pages = "";
+    $pages = "Inconnu";
 }
 if($editeur == ''){
-    $editeur = "";
+    $editeur = "Inconnu";
 }
 
 if($format == ''){
-    $format = "";
+    $format = "Inconnu";
 }
 
 if($section == ''){
-    $section= "";
+    $section= "Inconnu";
+}
+
+if($genre == ''){
+    $genre = "Inconnu";
 }
 
 // Les champs sont assignés à leur variable
