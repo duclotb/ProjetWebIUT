@@ -9,16 +9,16 @@ $keywords = $_GET['keywords'] ?? "";
 $dao = new LivreDAO();
 
 if ($keywords == ""){
-	$livres = $dao -> getCollectionLivres(0, 10);
+	$livres = $dao -> getCollectionLivres(0, 120);
 } else {
 	$arrKeywords = explode(' ', $keywords);
 	$livres = array();
 	foreach ($arrKeywords as $key => $word) {
 
-		
+
 		$buffer = $dao -> getLivresKeyword($word);
 
-		
+
 		foreach ($buffer as $oldISBN => $livre) {
 			$buffer[$buffer[$oldISBN]->getNumISBN()] = $buffer[$oldISBN];
 			unset($buffer[$oldISBN]);
