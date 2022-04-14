@@ -9,11 +9,9 @@ $keywords = $_GET['keywords'] ?? "";
 $dao = new LivreDAO();
 
 if ($keywords == ""){
-<<<<<<< HEAD
 	$livres = $dao -> getCollectionLivres(0, 120);
-=======
-	$livres = $dao -> getCollectionLivres(0, 147);
->>>>>>> db7acb69ff9cf87248cdbd37053476d7a9634c0a
+
+
 } else {
 	$arrKeywords = explode(' ', $keywords);
 	$livres = array();
