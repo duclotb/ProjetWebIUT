@@ -4,5 +4,6 @@ CREATE TABLE compte(
    nom CHAR(50) NOT NULL,
    dateNaissance DATE NOT NULL,
    mdp VARCHAR(50) NOT NULL,
+   admin LOGICAL DEFAULT false,
    PRIMARY KEY(mail)
 );
