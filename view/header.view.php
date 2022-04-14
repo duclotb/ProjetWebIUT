@@ -19,7 +19,7 @@
 		</form>
 		<div class="connect">
 			<a href="login.ctrl.php" class="btn"><strong>Se connecter</strong></a>
-			<a href="signIn.ctrl.php" class="btn"><strong>S'inscrire</strong></a>
+			<a href="signUp.ctrl.php" class="btn"><strong>S'inscrire</strong></a>
 		</div>
 	</div>
 </header>
