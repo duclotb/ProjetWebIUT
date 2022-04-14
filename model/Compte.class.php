@@ -12,16 +12,13 @@ private Panier $panier;
 private ListeEnvie $listeEnvie;
 
 //constructeur
-function __construct(int $niveau, string $mail, string $nom, string $prenom, string $mdp, string $dateNaissance, array $commandes, Panier $panier, ListeEnvie $listeEnvie) {
+function __construct(int $niveau, string $mail, string $nom, string $prenom, string $mdp, string $dateNaissance) {
   $this->niveau = $niveau;
   $this->mail = $mail;
   $this->nom = $nom;
   $this->prenom = $prenom;
   $this->mdp = $mdp;
   $this->dateNaissance = $dateNaissance;
-  $this->commandes = $commandes;
-  $this->panier = $panier;
-  $this->listeEnvie = $listeEnvie;
 }
 
 //Méthodes
