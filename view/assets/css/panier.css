@@ -1,3 +1,10 @@
 table, th, td {
+
   border: 1px solid black;
+  font-family: verdana, sans-serif;
+}
+
+.basket {
+  display: flex;
+  justify-content: center;
 }

@@ -45,8 +45,8 @@
 	<div class="right">
 
 		<div>
-			<a href="panier.ctrl.php"> <button type="button" class="btn"> Ajouter au panier</button></a>
-			<a href="panier.ctrl.php"><button type="button" class="btn">  Ajouter à la liste d'envie</button></a>
+			<a href="redirection.ctrl.php"> <button type="button" class="btn"> Ajouter au panier</button></a>
+			<a href="redirection.ctrl.php"><button type="button" class="btn">  Ajouter à la liste d'envie</button></a>
 		</div>
 
 		<div>
