@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../view/assets/css/homepage.css">
 
 <?php
-	require_once('header.view.php');
+	require_once('headerConnect.view.php');
 ?>
 <div class="container wrap space-between">
 
