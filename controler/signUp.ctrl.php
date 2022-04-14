@@ -4,6 +4,6 @@ require_once(__DIR__.'/../framework/view.fw.php');
 
 $view = new View();
 
-$view -> display("signIn.view.php");
+$view -> display("signUp.view.php");
 
 ?>

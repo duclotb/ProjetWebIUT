@@ -9,7 +9,7 @@
 
 <div class="container center">
 
-	<form action="index.html" method="post">
+	<form action="addAccount.ctrl.php" method="post">
 		<fieldset>
 
 			<h2>S'incscire</h2>
@@ -17,27 +17,27 @@
 
 			<div>
 				<label for="prenom">Prénom :</label><br>
-				<input type="text" name="mail" id="prenom">
+				<input type="text" name="prenom" id="prenom" required>
 			</div>
 
 			<div>
 				<label for="nom">Nom :</label><br>
-				<input type="text" name="mail" id="nom">
+				<input type="text" name="nom" id="nom" required>
 			</div>
 
 			<div>
 				<label for="mail">Mail :</label><br>
-				<input type="email" name="mail" id="mail">
+				<input type="email" name="mail" id="mail" required>
 			</div>
 
 			<div>
 				<label for="mdp">Mot de passe :</label><br>
-				<input type="password" name="mail" id="mdp">
+				<input type="password" name="mdp" id="mdp" required>
 			</div>
 
 			<div>
 				<label for="date_naissance">Date de naissance :</label><br>
-				<input type="date" name="mail" id="date_naissance">
+				<input type="date" name="dateNaissance" id="date_naissance" required>
 			</div>
 
 			
