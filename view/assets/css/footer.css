@@ -1,0 +1,18 @@
+
+
+.countries {
+  display: flex;
+  justify-content: center;
+}
+
+.paiement {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer {
+  font-family: Palatino Linotype;
+  font-size: 18;
+  background: linear-gradient(grey, white);
+  border-top: 1px solid;
+}
