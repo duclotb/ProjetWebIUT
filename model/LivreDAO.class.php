@@ -19,7 +19,6 @@ require_once(dirname(__FILE__).'/globalDAO.php');
 
       $prix = floatval($result[0]["prix"]);
       $synopsis = "";
-      $commentaires = array();
 
       if ($result[0]["auteurFacultatifNom"] == null){
         $auteurFacultatifNom = "";
@@ -32,8 +31,20 @@ require_once(dirname(__FILE__).'/globalDAO.php');
       } else {
         $auteurFacultatifPrenom = $result[0]["auteurFacultatifPrenom"];
       }
+
+      if ($result[0]["imageURL"] == ""){
+        $imageURL = "../view/assets/images/imageTest.jpg";
+      } else {
+        $imageURL = $result[0]["imageURL"];
+      }
+
+      if ($result[0]["synopsis"] == ""){
+        $synopsis = "Non renseigné";
+      } else {
+        $synopsis = $result[0]["synopsis"];
+      }
     
-      $livre = new Livre($result[0]["isbn"], $result[0]["titre"], $result[0]["sousTitre"], $result[0]["auteurNom"], $result[0]["auteurPrenom"], $auteurFacultatifNom, $auteurFacultatifPrenom, $result[0]["editeur"], $result[0]["anneeedition"], $result[0]["pages"], $result[0]["format"], $result[0]["section"], $prix, $synopsis, $commentaires);
+      $livre = new Livre($result[0]["isbn"], $result[0]["titre"], $result[0]["sousTitre"], $result[0]["auteurNom"], $result[0]["auteurPrenom"], $auteurFacultatifNom, $auteurFacultatifPrenom, $result[0]["editeur"], $result[0]["anneeedition"], $result[0]["pages"], $result[0]["format"], $result[0]["section"], $prix, $synopsis, $imageURL);
 
       return $livre;
     }

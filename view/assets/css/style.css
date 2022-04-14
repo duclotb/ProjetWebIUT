@@ -53,7 +53,13 @@ a{
 	border: 1px solid;
 	border-radius: 0 10px 10px 0;
 
+	background-color: white;
+
 	font-weight: bold;
+}
+
+.btn:hover{
+	background-color: rgba(56, 56, 56, 0.2);
 }
 
 /************************************/

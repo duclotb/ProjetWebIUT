@@ -1,29 +1,12 @@
-main{
-    /* display:flex; */
-}
-
-
 .left{
     display:flex;
-    white-space: nowrap ;
-    height: 50em;
     flex-direction: column;
-
+    white-space: nowrap ;
 }
 
 .center{
     display:flex;
-    height: 50em;
     flex-direction: column;
-    
-}
-
-.right{
-    display:flex;
-    width: 30em;
-    height: 50em;
-    flex-direction: column;
-
 }
 
 .topleft{
@@ -57,18 +40,7 @@ main{
     
 }
 
-main button{
-    width: 150px;
-    border: none;
-    background-color: #04AA6D;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 10px; 
-    margin:0.5em;
-    width: 300px;
-    height:30px;
-}
+
 
 .containerboutons{
     display:flex;
@@ -78,40 +50,32 @@ main button{
 
 }
 
-.prix{
+
+
+
+
+
+main button{
+    font-size: 16px;
+    cursor: pointer;
     text-align: center;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.right div:nth-of-type(1){ /*Bouton ajouter panier/liste*/
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.right div:nth-of-type(2){
+    margin-top: 2em;
+    font-size: 2em;
     font-weight: bold;
-    margin-top: 20px;
+    text-align: center;
 }
-
-
-.boutonlisteenvie{
-    background-color: gray !important;
-
-}
-
-.boutonachat:hover{
-    opacity: 0.8;
-}
-
-.boutonlisteenvie:hover{
-    opacity: 0.8;
-}
-
-
-.center{
-    margin-left:50px;
-
-}
-
-
-.bottomcenter {
-    
-
-
-}
-
-
-
-
-

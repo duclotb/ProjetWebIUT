@@ -9,7 +9,11 @@ $keywords = $_GET['keywords'] ?? "";
 $dao = new LivreDAO();
 
 if ($keywords == ""){
+<<<<<<< HEAD
 	$livres = $dao -> getCollectionLivres(0, 120);
+=======
+	$livres = $dao -> getCollectionLivres(0, 147);
+>>>>>>> db7acb69ff9cf87248cdbd37053476d7a9634c0a
 } else {
 	$arrKeywords = explode(' ', $keywords);
 	$livres = array();
@@ -33,6 +37,8 @@ $titres = array();
 $editeurs = array();
 $auteurs = array();
 $prix = array();
+$synopsis = array();
+$imageURLs = array();
 
 foreach ($livres as $key => $livre) {
 	array_push($isbn, $livre -> getNumISBN());
@@ -40,6 +46,7 @@ foreach ($livres as $key => $livre) {
 	array_push($editeurs, $livre -> getEditeur());
 	array_push($auteurs, $livre -> getAuteurs());
 	array_push($prix, $livre -> getPrix());
+	array_push($imageURLs, $livre -> getImageURL());
 }
 
 
@@ -50,6 +57,7 @@ $view -> assign("titres", $titres);
 $view -> assign("editeurs", $editeurs);
 $view -> assign("auteurs", $auteurs);
 $view -> assign("prix", $prix);
+$view -> assign("imageURLs", $imageURLs);
 
 $view -> assign("nombre", count($livres));
 
