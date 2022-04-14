@@ -1,9 +1,9 @@
 main{
-  height: 100%;
+  display: flex;
 }
 
 main .container{
-  height: 100%;
+  margin: auto;
 }
 
 main h2{
