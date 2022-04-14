@@ -21,6 +21,8 @@ if (!$compte){
 }
 
 else {
+    session_start();
+    $_SESSION["mail"] = $mail;
     include("homepage.ctrl.php");
 }
 
