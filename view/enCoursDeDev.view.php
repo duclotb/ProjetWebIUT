@@ -1,6 +1,6 @@
 
 <?php
-	require_once('headerConnect.view.php');
+	require_once('header.view.php');
 ?>
 
 
