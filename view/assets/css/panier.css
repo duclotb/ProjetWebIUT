@@ -1,10 +1,32 @@
-table, th, td {
-
-  border: 1px solid black;
-  font-family: verdana, sans-serif;
+main .rows{
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
 }
 
-.basket {
+
+
+main img{
+  width: 300px;
+  border: 1px solid;
+}
+
+main .info{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 1em;
+
+  font-size: 1.5em;
+}
+
+#total{
+  margin: 100px 0;
+  font-size: 2em;
+}
+
+main a{
+  display: inline-flex;
+  align-items: center;
+  width: 120px;
 }
