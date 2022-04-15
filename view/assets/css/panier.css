@@ -25,7 +25,7 @@ main .info{
   font-size: 2em;
 }
 
-main a{
+main a.btn{
   display: inline-flex;
   align-items: center;
   width: 120px;
