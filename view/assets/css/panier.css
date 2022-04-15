@@ -31,10 +31,6 @@ main a.btn{
   width: 120px;
 }
 
-main .container{
-  /* position: relative; */
-}
-
 #panier{
   position: sticky;
   top: 10px;

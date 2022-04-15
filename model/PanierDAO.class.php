@@ -49,8 +49,12 @@ require_once(dirname(__FILE__).'/globalDAO.php');
 		$bool = false;
 		$panier = $this -> getPanier($mail);
 
+		if ($panier == null){
+			return false;
+		}
 		$livres = $panier -> getLivres();
 
+		
 		foreach ($livres as $key => $livre) {
 			if ($livre -> getNumISBN() == $isbn){
 				$bool = true;
