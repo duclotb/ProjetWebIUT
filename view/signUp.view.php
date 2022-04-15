@@ -1,11 +1,6 @@
 <link rel="stylesheet" href="../view/assets/css/connection-inscription.css">
 
-
-<?php
-	require_once('header.view.php');
-?>
-
-
+<?php require_once('header.view.php'); ?>
 
 <div class="container center">
 
@@ -40,6 +35,7 @@
 				<input type="date" name="dateNaissance" id="date_naissance" required>
 			</div>
 
+			<p><strong><?=$message?></strong></p>
 			
 			<input type="submit" class="btn" value="S'inscrire">
 
@@ -49,6 +45,4 @@
 	</form>
 </div>
 
-<?php
-	require_once('footer.view.php');
-?>
+<?php require_once('footer.view.php'); ?>
