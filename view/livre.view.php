@@ -45,13 +45,20 @@
 	<div class="right">
 
 		<div>
-			<a href="redirection.ctrl.php"> <button type="button" class="btn"> Ajouter au panier</button></a>
-			<a href="redirection.ctrl.php"><button type="button" class="btn">  Ajouter à la liste d'envie</button></a>
+			<form action="addPanier.ctrl.php" method="get">
+				<input type="hidden" name="isbn" value="<?=$isbn?>">
+				<a href="addPanier.ctrl.php"> <button type="submit" class="btn"> Ajouter au panier</button></a>
+			</form>
+
+			<a href="redirection.ctrl.php"><button type="submit" class="btn">  Ajouter à la liste d'envie</button></a>
 		</div>
 
 		<div>
 			<p class="prix"> Prix : <?=$prix?> €</p>
 		</div>
+
+
+		
 
 	</div>
 
