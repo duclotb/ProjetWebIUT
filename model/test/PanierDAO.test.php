@@ -6,7 +6,10 @@
 	$dao = new PanierDAO();
 
 	$panier = $dao -> getPanier("test@test");
-
-	print_r($panier);
+	
+	$bool = $dao -> isLivreAlreadyInPanier("2-09-211355-0","test@test");
+	// print_r($panier);
+	var_dump($bool);
+	$dao -> insertLivre("2-09-211355-0","test@test");
 
 ?>
