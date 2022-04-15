@@ -17,7 +17,8 @@ require_once(dirname(__FILE__).'/globalDAO.php');
       $pdo = $this -> db -> query($req);
       $result = $pdo -> fetchAll(PDO::FETCH_ASSOC);
 
-      $prix = floatval($result[0]["prix"]);
+      $prix = str_replace(",",".",$result[0]["prix"]);
+      $prix = round(floatval($prix),2);
       $synopsis = "";
 
       if ($result[0]["auteurFacultatifNom"] == null){
