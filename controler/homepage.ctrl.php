@@ -10,7 +10,7 @@ $keywords = $_GET['keywords'] ?? "";
 $dao = new LivreDAO();
 
 if ($keywords == ""){
-	$livres = $dao -> getCollectionLivres(0, 120);
+	$livres = $dao -> getCollectionLivres(0, 147);
 
 
 } else {
