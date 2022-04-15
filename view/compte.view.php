@@ -1,21 +1,19 @@
+<link rel="stylesheet" href="../view/assets/css/compte.css">
 
-<?php
-	require_once('header.view.php');
+<?php require_once('header.view.php');?>
 
-?>
+<div class="container">
+	<p><strong>Nom</strong> : <?=$nom?></p>
 
-<h3>Nom:<h3>
-<?=$nom?><br>
+	<p><strong>Prénom</strong> : <?=$prenom?></p>
 
-<h3>Prénom:<h3>
-<?=$prenom?><br>
+	<p><strong>Email</strong> : <?=$mail?></p>
 
-<h3>Email:<h3>
-<?=$mail?><br>
+	<p><strong>Date de naissance</strong> : <?=$datenaissance?></p>
 
-<h3>Date de naissance:<h3>
-<?=$datenaissance?><br>
+	<p><strong>Dernière commmande</strong> : En cours de développement</p>
+</div>
 
-<?php
-	require_once('footer.view.php');
-?>
+
+
+<?php require_once('footer.view.php'); ?>
