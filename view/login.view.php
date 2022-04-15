@@ -1,9 +1,6 @@
 <link rel="stylesheet" href="../view/assets/css/connection-inscription.css">
 
-<?php
-	require_once('header.view.php');
-?>
-
+<?php require_once('header.view.php'); ?>
 
 
 <div class="container center">
@@ -31,13 +28,9 @@
 
       </div>
 
+      <p><strong><?=$messagerefusconnexion?></strong></p>
 
       <input type="submit" value="Se connecter" class="btn">
-      <br>
-      
-      <div class="existepas">
-          <?=$messagerefusconnexion?>
-      </div> 
 
     </fieldset>
 
@@ -46,6 +39,4 @@
 
 </div>
 
-<?php
-	require_once('footer.view.php');
-?>
+<?php require_once('footer.view.php'); ?>
