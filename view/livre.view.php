@@ -36,8 +36,6 @@
 			<p>Format : <span><?=$format?></span></p>
 			<br>
 			<p>Section : <span><?=$section?></span></p>
-			<br>
-			<p>Genre : <span><?=$genre?></span></p>
 		</div>
 
 	</div>
