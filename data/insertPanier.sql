@@ -1,0 +1,1 @@
+INSERT INTO panier (isbn, mail) VALUES ("2-09-211352-6", "test@test");
