@@ -17,7 +17,7 @@
       <?php endfor ?>
     </div>
 
-    <div>
+    <div id="panier">
       <p id="total">
         <strong>Total article</strong> : <?=$nombreArticle?>
         <br>
