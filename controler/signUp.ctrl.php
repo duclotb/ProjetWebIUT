@@ -5,6 +5,7 @@ require_once(__DIR__.'/../framework/view.fw.php');
 
 $view = new View();
 
+$view -> assign("message", "");
 $view -> display("signUp.view.php");
 
 ?>
