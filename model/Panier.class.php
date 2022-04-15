@@ -32,6 +32,10 @@ class Panier {
     //returns Collection<Livre>
   }
 
+  public function getNombreArticles(){
+    return count($this->livres);
+  }
+
 }
 
  ?>
