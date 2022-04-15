@@ -1,46 +1,37 @@
 <?php
 class Panier {
-//Attributs
-private $livres = array();
-private float $prixGlobal;
+  //Attributs
+  private $livres;
 
-//constructeur
-function __construct(array $livres) {
-  $this->livres = $livres;
-  $this->prixGlobal = 0;
-  foreach($livres as $value) {
-  $this->prixGlobal += $value;
+  //constructeur
+  function __construct() {
+    $this -> livres = array ();
   }
-}
 
-//Méthodes
-
-//public
-public function addPanier(Livre $livre) {
-  array_push($this->livres, $livre);
-  $this->prixGlobal += $livre->getPrix();
-}
-
-public function getPrixGlobal() {
-  return $this->prixGlobal;
-}
-
-public function getLivres() {
-  return $this->livres;
-  //returns Collection<Livre>
-}
-
-/*public function deletePanier() {
-  unset($this);
-}*/
+  //Méthodes
 
 
+  //public
+  public function addLivre(Livre $livre) {
+    array_push($this->livres, $livre);
+  }
 
+  public function getPrixGlobal(){
+    $prix = 0;
+    if ($this -> livres != null){
+      foreach ($this -> livres as $key => $livre) {
+        $prix += $livre -> getPrix();
+      }
+    }
+    return $prix;
+  }
 
-
+  
+  public function getLivres() {
+    return $this->livres;
+    //returns Collection<Livre>
+  }
 
 }
-
-
 
  ?>
