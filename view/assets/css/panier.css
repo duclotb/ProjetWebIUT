@@ -30,3 +30,13 @@ main a.btn{
   align-items: center;
   width: 120px;
 }
+
+main .container{
+  /* position: relative; */
+}
+
+#panier{
+  position: sticky;
+  top: 10px;
+  height: 100px;
+}
