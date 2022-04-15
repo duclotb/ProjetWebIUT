@@ -22,7 +22,7 @@
 			<a href="login.ctrl.php" class="btn"><strong>Se connecter</strong></a>
 			<a href="signUp.ctrl.php" class="btn"><strong>S'inscrire</strong></a>
 			<?php else : ?>
-			<p>Bonjour <?=$_SESSION["prenom"]?></p>
+			<p>Bonjour <strong><?=$_SESSION["prenom"]?></strong></p>
 			<a href="panier.ctrl.php" id="cart"><img src="../view/assets/images/panier-icon.svg"/></a>
 			<a href="compte.ctrl.php" class="btn"><strong>Compte</strong></a>
 			<a href="logout.ctrl.php" class="btn"><strong>Se déconnecter</strong></a>
