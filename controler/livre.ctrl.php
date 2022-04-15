@@ -108,6 +108,7 @@ $view->assign("editeur",$editeur);
 $view->assign("section",$section);
 $view -> assign("synopsis", $synopsis);
 $view -> assign("imageURL", $imageURL);
+$view -> assign("isbn", $isbn);
 
 //A supprimer, utilisée pour afficher toutes les informations de la variable
 //var_dump($livre);
