@@ -1,31 +1,33 @@
 <link rel="stylesheet" href="../view/assets/css/panier.css">
 
-<?php
-	require_once('header.view.php');
+<?php require_once('header.view.php'); ?>
 
-?>
+  <div class="container space-between">
+    <div>
+      <?php for ($i = 0; $i < $nombre; $i++) :?>
 
- <div id="basket">
-          <table>
-              <caption>
-                      Panier
-              </caption>
-
-              <tr>
-                <th>Titre</th>
-                <th>Prix</th>
-              </tr>
-
-                  <?php for ($i = 0; $i < $nombre; $i++) :?>
-                    <tr>
-                      <td><div class="titre"><?=$titre?></div></td>
-                      <td><div id="prix"><?=$prix?></td>
-                    </tr>
-                    <?php endfor ?>
-                      <tr><th colspan="5"><div id="corner-bottom">Total price :  <?=$prixGlobal?></div></th></tr>;
-          </table>
+      <div class="rows"> 
+        <img src="<?=$imageURLs[$i]?>" alt="">
+        <div class="info">
+          <p><strong>Titre</strong> : <?=$titres[$i]?></p>
+          <p><strong>Prix</strong> : <?=$prix[$i]?> €</p>
+        </div>
       </div>
 
-<?php
-  require_once('footer.view.php');
-  ?>
+      <?php endfor ?>
+    </div>
+
+    <div>
+      <p id="total"><strong>Prix Total</strong> : <?=$prixTotal?> €</p>
+      <a href="redirection.ctrl.php" class="btn">Commander</a>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+<?php require_once('footer.view.php'); ?>
