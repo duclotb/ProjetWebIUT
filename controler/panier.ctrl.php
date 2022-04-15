@@ -2,56 +2,83 @@
 
 require_once('../config.php');
 require_once('../model/globalDAO.php');
-require_once('../model/LivreDAO.class.php');
-require_once('../model/ListeEnvie.class.php');
-require_once('../model/Panier.class.php');
-require_once('../model/Compte.class.php');
-require_once('../model/Livre.class.php');
+require_once('../model/PanierDAO.class.php');
+
 
 require_once(__DIR__.'/../framework/view.fw.php');
 
 
-$isbn = $_GET['isbn'] ?? "";
+$mail = $_SESSION["mail"] ?? "";
+
+$dao = new PanierDAO();
+
+$panier = $dao -> getPanier($mail);
+$livres = $panier -> getLivres();
+
+$isbn = array();
+$titres = array();
+$editeurs = array();
+$auteurs = array();
+$prix = array();
+$synopsis = array();
+$imageURLs = array();
+
+foreach ($livres as $key => $livre) {
+  array_push($titres, $livre -> getTitre());
+  array_push($prix, $livre -> getPrix());
+  array_push($imageURLs, $livre -> getImageURL());
+}
+
+$prixTotal = $panier -> getPrixGlobal();
+
+$view = new view();
+
+$view -> assign("titres", $titres);
+$view -> assign("prix", $prix);
+$view -> assign("imageURLs", $imageURLs);
+$view -> assign("nombre", count($livres));
+$view -> assign("prixTotal", $prixTotal);
+
+$view -> display("panier.view.php");
+
+// //initialisation des objets
+// //$commandes = array();
+// //$listeLivres = array();
+// $livresCommande = array();
+// //$listeEnvie = new ListeEnvie($listeLivres);
+// $panier = new Panier($livresCommande);
+// //$compte = new Compte(1,'camille.rachidi@gmail.com','rachidi','camille','mdp','11/04/97',$commandes,$panier,$listeEnvie);
 
 
-//initialisation des objets
-//$commandes = array();
-//$listeLivres = array();
-$livresCommande = array();
-//$listeEnvie = new ListeEnvie($listeLivres);
-$panier = new Panier($livresCommande);
-//$compte = new Compte(1,'camille.rachidi@gmail.com','rachidi','camille','mdp','11/04/97',$commandes,$panier,$listeEnvie);
 
+// $dao = new LivreDAO();
+// //instanciation du livre récupéré dans la DAO
+// $livre = $dao->getLivre('2-03-652407-9');
 
+// //ajout du livre instancié dans le panier créé
+// $panier->addPanier($livre);
 
-$dao = new LivreDAO();
-//instanciation du livre récupéré dans la DAO
-$livre = $dao->getLivre('2-03-652407-9');
+// $listeLivresPanier = $panier->getLivres();
 
-//ajout du livre instancié dans le panier créé
-$panier->addPanier($livre);
+// foreach($listeLivresPanier as $value) {
 
-$listeLivresPanier = $panier->getLivres();
+// $titre = $livre->getTitre();
+// $prix = $livre->getPrix();
+// $prixGlobal = $panier->getPrixGlobal();
 
-foreach($listeLivresPanier as $value) {
+//    //assignation des variables à la vue
+//    $view = new View();
 
-$titre = $livre->getTitre();
-$prix = $livre->getPrix();
-$prixGlobal = $panier->getPrixGlobal();
+//    $view->assign("prixGlobal",$prixGlobal);
 
-   //assignation des variables à la vue
-   $view = new View();
+//    $view->assign("titre",$titre);
+//    $view->assign("prix",$prix);
 
-   $view->assign("prixGlobal",$prixGlobal);
+//    $view->assign("tabLivres",$livresCommande);
+//    $view->assign("nombre",count($panier->getLivres()));
 
-   $view->assign("titre",$titre);
-   $view->assign("prix",$prix);
+//    }
 
-   $view->assign("tabLivres",$livresCommande);
-   $view->assign("nombre",count($panier->getLivres()));
-
-   }
-
-   $view -> display("panier.view.php");
+//    $view -> display("panier.view.php");
 
  ?>
