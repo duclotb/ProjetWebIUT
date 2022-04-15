@@ -33,9 +33,13 @@ form input{
   padding: 5px;
 }
 
+fieldset p{
+  margin-top: 2.5em;
+  text-align: center;
+}
 
 input[type="submit"]{
-  margin-top: 5em;
+  margin-top: 2.5em;
 
   background-color: white;
 
