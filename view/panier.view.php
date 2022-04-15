@@ -18,11 +18,14 @@
     </div>
 
     <div id="panier">
-      <p id="total">
-        <strong>Total article</strong> : <?=$nombreArticle?>
-        <br>
-        <strong>Prix Total</strong> : <?=$prixTotal?> €</p>
-      <a href="redirection.ctrl.php" class="btn">Commander</a>
+      <div>
+        <p id="total">
+          <strong>Total article</strong> : <?=$nombreArticle?>
+          <br>
+          <strong>Prix Total</strong> : <?=$prixTotal?> €</p>
+        <a href="redirection.ctrl.php" class="btn">Commander</a>
+      </div>
+
     </div>
 
 
