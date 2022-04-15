@@ -33,5 +33,32 @@ require_once(dirname(__FILE__).'/globalDAO.php');
 		return $panier;
 	}
 
+	function insertLivre(string $isbn, string $mail){
+		if (($isbn == "" || $mail == "") || ($this -> isLivreAlreadyInPanier($isbn, $mail))){ 
+			return "Erreur lors de l'ajout";
+		} else {
+			// Ajoute à la table panier un lien entre le livre de numéro isbn $isbn et l'utilisateur de mail $mail
+			$req = 'INSERT INTO panier (isbn, mail) VALUES ("'.$isbn.'", "'.$mail.'")';
+			$pdo = $this -> db -> exec($req);
+			return "Livre ajouté";
+		}
+	}
+
+	function isLivreAlreadyInPanier(string $isbn, string $mail){
+		// Permet de savoir si un livre est dans dans le panier
+		$bool = false;
+		$panier = $this -> getPanier($mail);
+
+		$livres = $panier -> getLivres();
+
+		foreach ($livres as $key => $livre) {
+			if ($livre -> getNumISBN() == $isbn){
+				$bool = true;
+			}
+		}
+
+		return $bool;
+	}
+
   }
 ?>
